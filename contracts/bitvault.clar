@@ -133,7 +133,7 @@
       {
         collateral-amount: collateral-amount,
         stablecoin-minted: u0,
-        created-at: block-height
+        created-at: stacks-block-height
       }
     )
     (ok vault-id)
@@ -316,7 +316,7 @@
 (define-read-only (get-latest-btc-price)
   (map-get? last-btc-price 
     {
-      timestamp: block-height,
+      timestamp: stacks-block-height,
       price: u0
     }
   )
